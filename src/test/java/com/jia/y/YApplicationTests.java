@@ -1,6 +1,7 @@
 package com.jia.y;
 
 import com.jia.amqp.bean.book.Book;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.AmqpAdmin;
@@ -14,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class YApplicationTests {
@@ -40,12 +41,13 @@ public class YApplicationTests {
     public void contextLoads() {
     }
 
+    @Ignore
     @Test
     public void testRedis() {
         String a = String.valueOf(redisTemplate.opsForValue().get("a"));
         System.out.println(a);
     }
-
+    @Ignore
     @Test
     public void testrabbit() {
         Map map = new HashMap();
